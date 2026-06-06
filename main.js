@@ -69,7 +69,7 @@ const displayTemperature = (data => {
 // API calling
 const callApi =  async (city) => {
   try{
-    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=e87547a65f0058478e1e6f696517c866&units=metric`)  
+    const res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`)  
     const data = await res.json();
     showDateTime(data);
     displayTemperature(data);
