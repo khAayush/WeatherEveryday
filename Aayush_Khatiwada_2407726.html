@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherEveryday</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/8914/8914647.png">
+
+    <!-- External CSS files -->
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <!-- ERROR Screen when city not found -->
+    <div class="wrapper">
+        <div class="p404 space">
+            <i class="fa-regular fa-face-frown"></i>
+            <h1 class="space">404</h1>
+            <h3 class="space">City Not Found</h3>
+
+            <p class="detail space">
+                The city you are looking for either does not exist or requires more detail.
+                Try <br> adding the country name next to it. For example, 
+                Try <b>London, uk</b> rather than <b>London</b>.
+            </p>
+
+            <button class="btn btn-close" onclick="homecoming()">Return</button>
+        </div>
+
+        
+    </div>
+
+    <!-- Weather App content -->
+    <header>
+        <nav>
+            <div class="float-left">
+                <h1><span class="aqua">Weather</span>Everyday</h1>
+            </div>
+    
+            <div class="float-right">
+                
+                <h1 class="todate"><i class="fa-solid fa-calendar-days"></i><span id="dateContainer"></span></h1>
+                <p class="toTime"><i class="fa-solid fa-clock"></i><span id="timeContainer"></span></p>
+    
+            </div>
+        </nav>
+    
+        <section class="landing-page">
+            <div class="weather-card-main">
+                <div class="search-bar">
+                        <input type="text" placeholder="Search" class="find" spellcheck="false">
+                        <button class="search" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+
+                <div class="temperature">
+
+                    <div class="temperature-container">
+                        <div class="location">
+                            <h1><span class="city"></span>, <span class="country"></span></h1>
+                        </div>
+
+                        <div class="cloud-icon">
+                            <img src="" alt="weather icon" class="cloud">
+                        </div>
+
+                        <hr class="bar" color="gray">
+
+                        <div class="temp-value">
+                            <h1><span class="celcius"></span><sup>°</sup></h1>
+                        </div>
+
+                        <div class="status">
+                            <p class="description"></p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="weather-card-extra">
+                <div class="extra-container">
+                    <div class="pressure wth-card">
+                        <img src="https://img.icons8.com/sf-black-filled/64/FFFFFF/pressure.png" alt="pressure" class="icon">
+                        <h1>Pressure:</h1>
+                        <p><span class="pascal"></span> hPa</p>
+                    </div>
+                    <hr class="bar">
+                    <div class="humidity wth-card">
+                        <img src="https://img.icons8.com/ios-filled/50/FFFFFF/humidity.png" alt="humidity" class="icon">
+                        <h1>Humidity:</h1>
+                        <p><span class="humid"></span>%</p>
+                    </div>
+                    <hr class="bar">
+                    <div class="wind wth-card">
+                        <img src="https://img.icons8.com/external-goofy-solid-kerismaker/96/FFFFFF/external-Cloud-Wind-weather-goofy-solid-kerismaker.png" alt="wind" class="icon">
+                        <h1>Wind:</h1>
+                        <p><span class="speed"></span> m/s</p>
+                    </div>
+                </div>
+                </div>
+        </section>
+    </header>
+
+    <footer>
+        <p class="cprt">&copy; Designed and Coded by Aayush Khatiwada, WLV ID: 2407726</p>
+    </footer>
+
+
+
+    <!-- Javascript files -->
+    <script src="./main.js"></script>
+
+</body>
+</html>
